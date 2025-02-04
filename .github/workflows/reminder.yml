@@ -1,0 +1,11 @@
+name: Daily Reminder
+on:
+  schedule:
+    - cron: "0 20 * * *"  # 每天20点触发
+jobs:
+  reminder:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v0.3.0
+        with:
+          message: "今日论文进度未更新！"
